@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: url("image.png") center/cover ;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+.game {
+    width: 360px;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+#turn {
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.board {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+}
+
+.cell {
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.cell.x {
+    color: #0f0f0f;
+}
+
+.cell.o {
+    color: #f3edee;
+}
+
+.cell.win {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 18px;
+    color: white;
+    font-size: 18px;
+}
+#result {
+    height: 25px;
+    margin-top: 12px;
+    color: #7dff9b;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#newGame {
+    margin-top: 8px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #00a8ff;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#newGame:hover {
+    background: #008ed6;
+}
